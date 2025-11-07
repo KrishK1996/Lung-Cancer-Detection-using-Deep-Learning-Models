@@ -27,3 +27,53 @@ Each model was fine-tuned on the **IQ-OTHNCCD Lung Cancer Dataset** from Kaggle.
 ## 📂 Dataset
 **Dataset Name:** The IQ-OTHNCCD Lung Cancer Dataset  
 **Path Used:**  
+
+**Classes:**
+- `Normal`
+- `Benign`
+- `Malignant`
+
+The dataset contains CT scan images of lungs for model training and evaluation.
+
+---
+
+## ⚙️ Project Pipeline
+1. **Data Preprocessing**
+   - Image resizing and normalization
+   - Data augmentation (rotation, zoom, flip)
+   - Train-test split
+
+2. **Model Building**
+   - Transfer learning using pre-trained CNNs (MobileNetV2, InceptionV3, ResNet50)
+   - Added custom dense layers for classification
+   - Compiled using Adam optimizer and categorical cross-entropy loss
+
+3. **Training & Evaluation**
+   - Model training on GPU-enabled environment
+   - Metrics: Accuracy, Precision, Recall, F1-Score
+   - Visualization using confusion matrix and accuracy/loss plots
+
+4. **Prediction**
+   - Single image prediction function using trained models
+   - Outputs predicted class and confidence score
+
+---
+
+## 📊 Results
+- Achieved high accuracy across all three models.
+- **MobileNetV2** performed best in terms of efficiency and inference speed.
+- Visualization includes:
+  - Confusion Matrix
+  - Training vs Validation Accuracy
+  - Training vs Validation Loss
+
+---
+
+## 🧩 Technologies Used
+- **Python**
+- **TensorFlow / Keras**
+- **OpenCV**
+- **NumPy / Pandas / Matplotlib**
+- **Google Colab**
+
+---
